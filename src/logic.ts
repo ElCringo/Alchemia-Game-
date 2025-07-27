@@ -1,7 +1,8 @@
-/*Functions for all interactions are to be stored here. The game's UI will have 4 slots: 2 ingredient slots, 1 reaction slot, and 1 result slot. 
+/*Functions for all interactions are to be stored here. The game's UI will have 5 slots: 2 ingredient slots, 1 reaction slot, 1 equipment slot, and 1 result slot. 
 2 ingredients will be chosen from a list of ingredients by first clicking on the window in which the content is to be changed, and then clicking the ingredient to fill the slot.
 There will be "Empty Slot" button too, to empty each of the slots.
 The Processing method will be chosen from another list. The interaction with the slot will be the same as in other cases.
+The Equipment will be chosen from the relevant list. The choice of a wrong tool (e.g.: trying to cool something with a furnace), will lead to a failure (game over).
 Result slot will contain the object created through the interactions of the two ingredients, based on the logic defined by the chosen processing method.
 Resulting object will be tested for having values (see ingredient list) above 3 or below 0. If that will be the case, game is over.
 The ultimate goal of the game is to combine the compounds until one reaches a "Philosopher's Stone" (Object with all scores of 3).
@@ -52,5 +53,9 @@ function safetyCheck() { //This function will check if the component created in 
 };
 
 function win() { //This function will check if the component created in the reaction slot has all values equal to 3. If so, the function will induce "Win".
+
+};
+
+function rightEquipment() { //This function will check if the equipment chosen to perform the task is adequate. If not, it will lead to "Game Over".
 
 };
